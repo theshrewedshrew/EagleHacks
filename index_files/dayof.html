@@ -1,0 +1,1229 @@
+<!DOCTYPE html>
+<html class=" js svg js svg">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"">
+    <meta charset="utf-8">
+    <title>
+      EagleHacks April 2-3, 2016
+    </title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" href="./index_files/EagleHacks Pictures/icon.ico">
+    <meta property="og:title" content="EagleHacks April 2016">
+    <meta property="og:site_name" content="EagleHacks">
+    <meta property="og:description" content="Learn more about the student-run hackathon at the Performing Arts Center in Allen, Texas, U.S.">
+    <meta property="og:image" content="icon.ico">
+    <link rel="image_src" href="icon.ico">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link href="./index_files/css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="./index_files/main.css">
+    <script src="./index_files/analytics.js">
+    </script>
+    <script src="./index_files/main.js">
+    </script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js">
+    </script>
+    <script type="text/javascript">
+    var map;
+    function initialize(){
+    oldtab = document.getElementById("applicationtab");
+    var myLatLng = new google.maps.LatLng(33.108750,-96.659248);
+      var mapProp = {
+        center: myLatLng,
+        zoom: 15,        
+        scrollwheel: false,
+        panControl:true,
+        zoomControl:true,
+        mapTypeControl:true,
+        scaleControl:true,
+        streetViewControl:true,
+        overviewMapControl:true,
+        rotateControl:true,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+      map=new google.maps.Map(document.getElementById('googlemap'),mapProp);
+      var marker = new google.maps.Marker({
+        position: myLatLng,
+        title:'Performaing Arts Center',
+        map:map
+        });
+      }
+    </script>
+    <script type="text/javascript">
+    function tabbing(newtab)
+    {
+      document.getElementById(oldtab.id).removeAttribute("class");
+      document.getElementById(oldtab.id).setAttribute("class","faq-nav-entry");
+      document.getElementById(newtab.id).setAttribute("class", "faq-nav-entry active");
+      
+      document.getElementById(oldtab.id.replace("tab","")).removeAttribute("class");
+      document.getElementById(oldtab.id.replace("tab","")).setAttribute("class","faq-category row");
+      document.getElementById(newtab.id.replace("tab","")).setAttribute("class", "faq-category row active");
+      oldtab = newtab;
+      test = document.getElementById(newtab.id.replace("tab",""))
+    }
+    </script>
+  </head>
+  <body onload="initialize()">
+  <!--#######################################################################################################################################################-->
+    <header id="splash">
+      <!-- particles.js container -->
+      <div id="particles-js">
+      </div>
+      <!-- particles.js lib - https://github.com/VincentGarreau/particles.js -->
+      <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js">
+      </script>
+      <script src="./index_files/particles.js">
+      </script>
+      <div class="wrapper container-fluid">
+
+
+        <a id="mlh-trust-badge" style="position:fixed;top:0;right:50px;max-width:100px;width:10%;min-width: 80px;display:block;z-index:10000" href="https://mlh.io/seasons/s2016/events?utm_source=s2016&utm_medium=TrustBadge&utm_campaign=s2016" target="_blank"><img src="https://s3.amazonaws.com/logged-assets/trust-badge/s2016.png" alt="MLH Official - Spring 2016" style="width:100%;" ></a>
+
+
+        <div class="row">
+          <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3 text-center">
+            <div id="logoContainer">
+              <img id="Logo" src="./index_files/EagleHacks Pictures/Long Logo.png" alt="EagleHacks" class="img-responsive">
+            </div>
+            <div class="announcement-block">
+              <hgroup>
+                <h1>
+                  April 2-3, 2016
+                </h1>
+                <h2>
+                  Performing Arts Center - Allen, TX
+                </h2>
+              </hgroup>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 text-center header-buttons">
+            <div class="row indent">
+              <a href="http://www.eventbrite.com/e/eaglehacks-winter-2016-startup-hackathon-tickets-19567604231?aff=es2" class="btn btn-lg btn-block btn-primary" target="_blank">
+                Sign up now!
+              </a>
+            </div>
+            <div class="row">
+              <div class="col-xs-12 col-lg-6 social-button-left">
+                <a href="https://www.facebook.com/EagleHacks-1632403923680849/timeline/" target="_blank" class="btn btn-lg btn-block btn-primary">
+                  <i class="fa fa-lg fa-facebook">
+                  </i>
+                  <span class="social-addon">
+                    /eaglehacks
+                  </span>
+                </a>
+              </div>
+              <div class="col-xs-12 col-lg-6 social-button-right">
+                <a href="https://twitter.com/eaglehacks" target="_blank" class="btn btn-lg btn-block btn-primary">
+                  <i class="fa fa-lg fa-twitter">
+                  </i>
+                  <span class="social-addon">
+                    @eaglehacks
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!--###################################################################################################################################################-->
+    <div class="container-fluid">
+      <section class="row dark">
+        <div class="col-xs-10 col-xs-offset-1">
+          <div class="row">
+            <div class="col-xs-12">
+              <h1 id="about" class="section-title">
+              About<span>
+              EagleHacks</span>
+              </h1>
+              <p class="lead">
+                EagleHacks is DFW's first mix match hackathon &amp; startup competition for high school students. We invite students to Dallas for one weekend for an experience that mashes together building, making, hacking and bootstrapping a company. Over 24 hours, 300 participants will build and design products, create business models or pitch, and ultimately compete in front of a panel of developers, designers, and investors for prizes and opportunities. Participants must follow the <a href="http://static.mlh.io/docs/mlh-code-of-conduct.pdf">MLH Code of Conduct</a>. The Code of Conduct can also be found on the MLH home page.
+              </p>
+              <h2 id="aboutEagleHacks">
+                What is EagleHacks?
+              </h2>
+              <div class="about-entries">
+                <div class="about-entry">
+                  <div class="about-entry-header">
+                    <img src="./index_files/EagleHacks Pictures/24 hours of coding.jpg" class="img-responsive" width="100%">
+                  </div>
+                  <div class="about-entry-icon">
+                    <span class="fa fa-3x fa-clock-o">
+                    </span>
+                  </div>
+                  <h3>
+                    24h of hacking
+                  </h3>
+                  <p>
+                    Do you have a project you've wanted to code, but haven't had enough time? Now you have the chance to dedicate 24 hours on this project. 
+                    <em>
+                      You can only be judged on what you wrote within these 24 hours
+                    </em>
+                  </p>
+                </div>
+                <div class="about-entry">
+                  <div class="about-entry-header">
+                    <img src="./index_files/EagleHacks Pictures/Hackers.jpg" class="img-responsive" width="100%">
+                  </div>
+                  <div class="about-entry-icon">
+                    <span class="fa fa-3x fa-users">
+                    </span>
+                  </div>
+                <h3>
+                  Meet fellow hackers!
+                </h3>
+                <p>
+                  You have the opportunity to meet fellow programmers from all over the world, exchange your knowledge and possibly find your future business partner, with whom you could found your first start-up.
+                </p>
+              </div>
+              <div class="about-entry">
+                <div class="about-entry-header">
+                  <img src="./index_files/EagleHacks Pictures/Prizes.jpg" class="img-responsive" width="100%">
+                </div>
+                <div class="about-entry-icon">
+                  <span class="fa fa-3x fa-trophy">
+                  </span>
+                </div>
+                <h3>
+                  Prizes and Freebies
+                </h3>
+                <p>
+                  Thanks to our sponsors, you will have the chance to win a variety of awesome prizes. Even if you don't win, we can promise that you won't leave empty handed!
+                </p>
+              </div>
+              <div class="about-entry">
+                <div class="about-entry-header">
+                <img src="./index_files/EagleHacks Pictures/Career.jpg" class="img-responsive" width="100%">
+                </div>
+                  <div class="about-entry-icon">
+                    <span class="fa fa-3x fa-comments-o">
+                    </span>
+                  </div>
+                  <h3>
+                    Career Opportunities
+                  </h3>
+                  <p>
+                    Learn about personal job experiences through some of the engineers and recruiters of our sponsors. Who knows, maybe you could set up an interview!
+                  </p>
+                </div>
+              </div>
+              <h2 id="abouteaglehacks">
+                Where Does EagleHacks Take Place?
+              </h2>
+              <p class="lead">
+                EagleHacks takes place at the Performing Arts Center in Allen, Texas; home of the Allen Eagle Football Team!
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--###################################################################################################################################################-->
+      <section  style="padding: 0px;position: relative;  background-color: rgb(229,227,223);">
+        <div id="googlemap" style="width:100%; height:450px">
+        </div>
+      </section>
+      <!--###################################################################################################################################################-->
+      <section class="row dark">
+        <div class="col-xs-10 col-xs-offset-1">
+          <h1 id="speakers" class="section-title">
+            Judges & Speakers<span>
+            Meet the Speakers</span>
+          </h1>
+		  
+          <h1 class="lead text-center">
+          </h1>
+          <div class="speakers-entries">
+		    <div class="speakers-member-wrapper">
+              <div class="speakers-member">
+                <div class="speakers-member-header">
+                  <img src="./index_files/Speakers & Judges/HowardLim.jpg" class="img-responsive header-blur">
+                </div>
+                <img src="./index_files/Speakers & Judges/HowardLim.jpg" class="img-circle speakers-member-img">
+                <div class="speakers-member-details">
+                  <p class="speakers-member-name">
+                    Howard L. Lim
+                  </p>
+                  <p class="speakers-member-role">
+                    Locke Lord
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="speakers-member-wrapper">
+              <div class="speakers-member">
+                <div class="speakers-member-header">
+                  <img src="./index_files/Speakers & Judges/NancyHong.jpg" class="img-responsive header-blur">
+                </div>
+                <img src="./index_files/Speakers & Judges/NancyHong.jpg" class="img-circle speakers-member-img">
+                <div class="speakers-member-details">
+                  <p class="speakers-member-name">
+                    Nancy Hong
+                  </p>
+                  <p class="speakers-member-role">
+                    UNT Innovation
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="speakers-member-wrapper">
+              <div class="speakers-member">
+                <div class="speakers-member-header">
+                  <img src="./index_files/Speakers & Judges/ManjunathCharmani.jpg" class="img-responsive header-blur">
+                </div>
+                <img src="./index_files/Speakers & Judges/ManjunathCharmani.jpg" class="img-circle speakers-member-img">
+                <div class="speakers-member-details">
+                  <p class="speakers-member-name">
+                    Manjunath Charmani
+                  </p>
+                  <p class="speakers-member-role">
+                    iStart Valley
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="speakers-member-wrapper">
+              <div class="speakers-member">
+                <div class="speakers-member-header">
+                  <img src="./index_files/Speakers & Judges/AlexLazaris.jpg" class="img-responsive header-blur">
+                </div>
+                <img src="./index_files/Speakers & Judges/AlexLazaris.jpg" class="img-circle speakers-member-img">
+                <div class="speakers-member-details">
+                  <p class="speakers-member-name">
+                    Alex Lazaris
+                  </p>
+                  <p class="speakers-member-role">
+                    Mavenlink
+                  </p>
+                </div>
+              </div>
+            </div>
+              <div class="speakers-member-wrapper">
+              <div class="speakers-member">
+                <div class="speakers-member-header">
+                  <img src="./index_files/Speakers & Judges/AndrewChen.jpg" class="img-responsive header-blur">
+                </div>
+                <img src="./index_files/Speakers & Judges/AndrewChen.jpg" class="img-circle speakers-member-img">
+                <div class="speakers-member-details">
+                  <p class="speakers-member-name">
+                    Andrew Chen
+                  </p>
+                  <p class="speakers-member-role">
+                    Monkey King Noodle Company
+                  </p>
+                </div>
+              </div>
+            </div>
+             <div class="speakers-member-wrapper">
+              <div class="speakers-member">
+                <div class="speakers-member-header">
+                  <img src="./index_files/Speakers & Judges/BradBush.jpg" class="img-responsive header-blur">
+                </div>
+                <img src="./index_files/Speakers & Judges/BradBush.jpg" class="img-circle speakers-member-img">
+                <div class="speakers-member-details">
+                  <p class="speakers-member-name">
+                    Brad Bush
+                  </p>
+                  <p class="speakers-member-role">
+                    Dialexa
+                  </p>
+                </div>
+              </div>
+            </div>
+                         <div class="speakers-member-wrapper">
+              <div class="speakers-member">
+                <div class="speakers-member-header">
+                  <img src="./index_files/Speakers & Judges/EricLenington.png" class="img-responsive header-blur">
+                </div>
+                <img src="./index_files/Speakers & Judges/EricLenington.png" class="img-circle speakers-member-img">
+                <div class="speakers-member-details">
+                  <p class="speakers-member-name">
+                    Eric Lenington
+                  </p>
+                  <p class="speakers-member-role">
+                    24x8 LLC
+                  </p>
+                </div>
+              </div>
+            </div>
+                         <div class="speakers-member-wrapper">
+              <div class="speakers-member">
+                <div class="speakers-member-header">
+                  <img src="./index_files/Speakers & Judges/KenKoo.png" class="img-responsive header-blur">
+                </div>
+                <img src="./index_files/Speakers & Judges/KenKoo.png" class="img-circle speakers-member-img">
+                <div class="speakers-member-details">
+                  <p class="speakers-member-name">
+                    Ken Koo
+                  </p>
+                  <p class="speakers-member-role">
+                    Bridge Alliance
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="speakers-member-wrapper">
+              <div class="speakers-member">
+                <div class="speakers-member-header">
+                  <img src="./index_files/Speakers & Judges/ChiragGupta.jpg" class="img-responsive header-blur">
+                </div>
+                <img src="./index_files/Speakers & Judges/ChiragGupta.jpg" class="img-circle speakers-member-img">
+                <div class="speakers-member-details">
+                  <p class="speakers-member-name">
+                    Chirag Gupta
+                  </p>
+                  <p class="speakers-member-role">
+                    Nod Coworking
+                  </p>
+                </div>
+              </div>
+            </div>
+			<div class="speakers-member-wrapper">
+              <div class="speakers-member">
+                <div class="speakers-member-header">
+                  <img src="./index_files/Speakers & Judges/KevinHarris.png" class="img-responsive header-blur">
+                </div>
+                <img src="./index_files/Speakers & Judges/KevinHarris.png" class="img-circle speakers-member-img">
+                <div class="speakers-member-details">
+                  <p class="speakers-member-name">
+                    Kevin Harris
+                  </p>
+                  <p class="speakers-member-role">
+                    The Guild of Software Architects
+                  </p>
+                </div>
+              </div>
+            </div>
+			<div class="speakers-member-wrapper">
+              <div class="speakers-member">
+                <div class="speakers-member-header">
+                  <img src="./index_files/Speakers & Judges/BenDavis.jpg" class="img-responsive header-blur">
+                </div>
+                <img src="./index_files/Speakers & Judges/BenDavis.jpg" class="img-circle speakers-member-img">
+                <div class="speakers-member-details">
+                  <p class="speakers-member-name">
+                    Ben Davis
+                  </p>
+                  <p class="speakers-member-role">
+                    Bold Idea
+                  </p>
+                </div>
+              </div>
+            </div>
+			<div class="speakers-member-wrapper">
+              <div class="speakers-member">
+                <div class="speakers-member-header">
+                  <img src="./index_files/Speakers & Judges/AdamSmith.JPG" class="img-responsive header-blur">
+                </div>
+                <img src="./index_files/Speakers & Judges/AdamSmith.JPG" class="img-circle speakers-member-img">
+                <div class="speakers-member-details">
+                  <p class="speakers-member-name">
+                    Adam Smith
+                  </p>
+                  <p class="speakers-member-role">
+                    TeacherTube
+                  </p>
+                </div>
+              </div>
+            </div>
+			<div class="speakers-member-wrapper">
+              <div class="speakers-member">
+                <div class="speakers-member-header">
+                  <img src="./index_files/Speakers & Judges/MichaelChaffin.jpg" class="img-responsive header-blur">
+                </div>
+                <img src="./index_files/Speakers & Judges/MichaelChaffin.jpg" class="img-circle speakers-member-img">
+                <div class="speakers-member-details">
+                  <p class="speakers-member-name">
+                    Michael Chaffin
+                  </p>
+                  <p class="speakers-member-role">
+                    3 Commas
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--###################################################################################################################################################-->
+      <section class="row light">
+        <div class="col-xs-10 col-xs-offset-1">
+          <div class="row">
+            <div class="col-xs-12">
+            <h1 id="sponsors" class="section-title">
+                Sponsors<span>
+                Sponsor EagleHacks</span>
+              </h1>
+              <div id="sponsorships">
+			    <div id="one">
+					<a href="http://www.lockelord.com/" target="_blank">
+						<img src="./index_files/Sponsors/LockeLord.jpg" alt="Locke Lord"/>
+					</a>
+					<a href="https://www.rbfcu.org/" target="_blank">
+						<img src="./index_files/Sponsors/RBFCU.png" alt="RBFCU"/>
+					</a>
+                </div>
+				<div id="bd">
+                </div>
+                <div id="one">
+					<a href="http://www.secondgen.org/" target="_blank">
+						<img src="./index_files/Sponsors/2ndGen.png" alt="2nd Gen"/>
+					</a>
+					<a href="https://www.googleforentrepreneurs.com/" target="_blank">
+						<img src="./index_files/Sponsors/Google.png" alt="Google"/>
+					</a>
+					<a href="https://form.io/" target="_blank">
+						<img src="./index_files/Sponsors/FormIo.png" alt="Form.IO"/>
+					</a>
+                </div>
+                <div id="bd">
+                </div>
+              </div>
+              <div id="sponsorships">
+                <div id="two">
+					<a href="http://www.istartjax.org/" target="_blank">
+						<img src="./index_files/Sponsors/IStartValley.png" alt="IStartValley"/>
+					</a>
+					<a href="https://www.mavenlink.com/" target="_blank">
+						<img src="./index_files/Sponsors/MavenLink.png" alt="MavenLink"/>
+					</a>
+					<a href="http://launchsummer.org/" target="_blank">
+						<img src="./index_files/Sponsors/MITLaunch.jpg" alt="MIT Launch"/>
+					</a>
+					<a href="http://www.madhousedomains.com/" target="_blank">
+						<img src="./index_files/Sponsors/MadHouseDomain.png" alt="Mad House Domain"/>
+					</a>
+					<a href="https://guildsa.org/" target="_blank">
+						<img src="./index_files/Sponsors/GuildSA.png" alt="Guild / SA"/>
+					</a>
+					<a href="http://www.kindsnacks.com/" target="_blank">
+						<img src="./index_files/Sponsors/Kind.jpg" alt="KIND"/>
+					</a>
+					<a href="https://www.soylent.com/" target="_blank">
+						<img src="./index_files/Sponsors/Soylent.png" alt="Soylent"/>
+					</a>
+					<a href="http://hackdfw.com/" target="_blank">
+						<img src="./index_files/Sponsors/HackDfw.png" alt="Hack DFW"/>
+					</a>
+					<!--<a href="https://aws.amazon.com/" target="_blank">
+						<img src="./index_files/Sponsors/AmazonWebServices.png" alt="Amazon Web Services"/>
+					</a>-->
+					<a href="http://rarelearning.com/" target="_blank">
+						<img src="./index_files/Sponsors/RareLearning.png" alt="Sticker Giant"/>
+					</a>
+                </div>
+                <div id="bd">
+                </div>
+            </div>
+			<div id="sponsorships">
+                <div id="three">
+					<a href="https://www.mywikis.com/" target="_blank">
+						<img src="./index_files/Sponsors/MyWikis.png" alt="MyWikis"/>
+					</a>
+					<a href="http://www.noddfw.com/" target="_blank">
+						<img src="./index_files/Sponsors/NoD.png" alt="NoD"/>
+					</a>
+					<a href="https://keen.io/" target="_blank">
+						<img src="./index_files/Sponsors/KeenIO.png" alt="Keen IO"/>
+					</a>
+					<a href="https://lob.com/" target="_blank">
+						<img src="./index_files/Sponsors/Lob.png" alt="Lob"/>
+					</a>
+					<a href="https://kloudless.com/" target="_blank">
+						<img src="./index_files/Sponsors/Kloudless.png" alt="Kloudless"/>
+					</a>
+					<!--<a href="" target="_blank">-->
+						<img src="./index_files/Sponsors/SchoolsForMe.jpg" alt="Schools For Me"/>
+					<!--</a>-->
+					<a href="http://www.stickergiant.com/" target="_blank">
+						<img src="./index_files/Sponsors/StickerGiant.png" alt="Sticker Giant"/>
+					</a>
+					<a href="https://indico.io/" target="_blank">
+						<img src="./index_files/Sponsors/Indico.png" alt="Indico"/>
+					</a>
+					<a href="http://www.bitalino.com/" target="_blank">
+						<img src="./index_files/Sponsors/BitAlino.png" alt="Sticker Giant"/>
+					</a>
+					<a href="www.biosignalsplux.com/" target="_blank">
+						<img src="./index_files/Sponsors/Plux.png" alt="Sticker Giant"/>
+					</a>
+					<a href="https://www.myo.com/" target="_blank">
+						<img src="./index_files/Sponsors/myo.jpg" alt="Myo Gesture Control Armband"/>
+					</a>
+					<a href="https://www.makeschool.com/" target="_blank">
+						<img src="./index_files/Sponsors/MakeSchool.jpg" alt="Make School"/>
+					</a>
+					<a href="http://www.urbanfarmonline.com/" target="_blank">
+						<img src="./index_files/Sponsors/UrbanFarm.jpg" alt="Urban Farm South Dallas"/>
+					</a>
+					<a href="http://aspirebeverages.com/" target="_blank">
+						<img src="./index_files/Sponsors/Aspire.png" alt="Aspire Sports Drinks"/>
+					</a>
+					<a href="https://www.boldidea.org/" target="_blank">
+						<img src="./index_files/Sponsors/BoldIdea.png" alt="Bold Idea"/>
+					</a>
+					<a href="https://kapeli.com/dash" target="_blank">
+						<img src="./index_files/Sponsors/Dash.png" alt="Dash"/>
+					</a>
+				</div>
+				<div id="bd">
+				</div>
+			</div>				
+            <div class="row text-center">
+				<h1>
+					Partners
+            </h1>
+            </div>
+            <div id="sponsorships">
+                <div id="partners">
+					<a href="http://www.allenisd.org" target="_blank">
+						<img src="./index_files/Sponsors/AllenEagles.gif" alt="Allen Eagles"/>
+					</a>
+					<a href="https://mlh.io" target="_blank">
+						<img src="./index_files/Sponsors/MLH.png" alt="Major League Hacking"/>
+					</a>
+					<a href="http://www.launchedindfw.com/" target="_blank">
+						<img class="DFW-Image" src="http://www.launchedindfw.com/l.php?img=c&check=true" alt="LaunchDFW"/>
+					</a>
+				</div>
+                <div id="bd">
+                </div>
+            </div>
+            <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 text-center header-buttons">
+                <a href="https://drive.google.com/file/d/0BxspSPui-jINTEVxRGo2Y3pqX0k/view?usp=sharing" target="_blank" class="btn btn-lg btn-block btn-primary">
+                  Become a Sponsor
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--###################################################################################################################################################-->
+      <section class="row dark">
+        <div class="col-xs-10 col-xs-offset-1">
+          <div class="row">
+            <div class="col-xs-12">
+              <h1 id="schedule" class="section-title">
+                Schedule<span>
+                of the event</span>
+              </h1>
+              <p class="lead text-center">
+              
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-xs-12">
+              <h3>
+                April 2nd, 2016
+              </h3>
+              <div>
+                <table class="table">
+                  <tbody>
+                    <tr>
+                      <td>
+                        9AM
+                      </td>
+                      <td>
+                        Check In                    
+                      </td>
+                      <td>
+                        Lobby
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        10AM
+                      </td>
+                      <td>
+                        Welcome + Keynotes
+                      </td>
+                      <td>
+                        Cafeteria
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        11AM
+                      </td>
+                      <td>
+                        Demos
+                      </td>
+                      <td>
+                        Cafeteria
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        12PM
+                      </td>
+                      <td>
+                        Hacking Begins
+                      </td>
+                      <td>
+                        Band Hall
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        1PM
+                      </td>
+                      <td>
+                        Lunch
+                      </td>
+                      <td>
+                        Lobby
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        2PM
+                      </td>
+                      <td>
+                        Workshops
+                      </td>
+                      <td>
+                        Band Hall
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        7PM
+                      </td>
+                      <td>
+                        Dinner
+                      </td>
+                      <td>
+                        Lobby
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <h3>
+              April 3rd, 2016</h3>
+              <div>
+                <table class="table">
+                  <tbody>
+                    <tr>
+                      <td>
+                        12AM
+                      </td>
+                      <td>
+                        Midnight Snack
+                      </td>
+                      <td>
+                        Band Hall
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        3AM
+                      </td>
+                      <td>
+                        HypeFest
+                      </td>
+                      <td>
+                        Band Hall
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        5AM
+                      </td>
+                      <td>
+                        Surprise
+                      </td>
+                      <td>
+                        Lobby
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        7AM
+                      </td>
+                      <td>
+                        Breakfast
+                      </td>
+                      <td>
+                        Lobby
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        12PM
+                      </td>
+                      <td>
+                        Lunch & Hacking Ends
+                      </td>
+                      <td>
+                        Lobby
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        1PM
+                      </td>
+                      <td>
+                        Hack Demo Fair
+                      </td>
+                      <td>
+                        Lobby
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        2PM
+                      </td>
+                      <td>
+                        Closing Ceremony
+                      </td>
+                      <td>
+                        Auditorium
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        3PM
+                      </td>
+                      <td>
+                        Hackathon Ends
+                      </td>
+                      <td>
+                        Auditorium
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--###################################################################################################################################################-->
+      <section class="row light">
+        <div class="col-xs-10 col-xs-offset-1">
+          <div class="row">
+            <div class="col-xs-12">
+              <h1 id="faq" class="section-title">
+                FAQ<span>
+                Frequently Asked Questions</span>
+              </h1>
+              <h2 class="text-center">
+                <p class="lead">
+                  We know you will have questions so we put the answers to the most common ones right here.
+                </p>
+                <p class="lead">
+                  If you can't find an answer to your question, simply send us an email: &nbsp;
+                  <a href="mailto:contact@EagleHacks.com" target="_blank" alt="contact@EagleHacks.com">
+                    contact@EagleHacks.com
+                  </a>
+                </p>
+              </h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
+              <div id="faqContainer">
+                <ul id="faqNavigation" class="nav nav-justified nav-jacobshack">
+                  <li onclick="tabbing(this)" id="applicationtab" role="presentation" class="active faq-nav-entry">
+                    <a href="http://eaglehacks.com/#faq">
+                      <span class="fa fa-edit">
+                      </span>
+                      <span class="hidden-xs">
+                      &nbsp;
+                      Application</span>
+                    </a>
+                  </li>
+                  <li onclick="tabbing(this)" id="hackingtab" role="presentation" class="faq-nav-entry">
+                    <a href="http://eaglehacks.com/#faq">
+                      <span class="fa fa-code">
+                      </span>
+                      <span class="hidden-xs">
+                      &nbsp;
+                      Hacking</span>
+                    </a>
+                  </li>
+                  <li onclick="tabbing(this)" id="traveltab" role="presentation" class="faq-nav-entry">
+                    <a href="http://eaglehacks.com/#faq">
+                      <span class="fa fa-plane">
+                      </span>
+                      <span class="hidden-xs">
+                      &nbsp;
+                      Travel</span>
+                    </a>
+                  </li>
+                  <li onclick="tabbing(this)" id="otherstab" role="presentation" class="faq-nav-entry">
+                    <a href="http://eaglehacks.com/#faq">
+                      <span class="fa fa-question-circle">
+                      </span>
+                      <span class="hidden-xs">
+                      &nbsp;
+                      Others</span>
+                    </a>
+                  </li>
+                </ul>
+                <div id="faqContent">
+                  <div id="application" class="faq-category row active">
+                    <div class="faq-entry col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                      <h3>
+                        How to sign up?
+                      </h3>
+                      <p>
+                        Simply head to our &nbsp;
+                        <a href="http://www.eventbrite.com/e/eaglehacks-winter-2016-startup-hackathon-tickets-19567604231?aff=es2" target="_blank">
+                          Registration Portal
+                        </a>
+                        &nbsp;
+                        and register there. Tell us why you are amazing and we will hopefully see you in Allen in April! EVERYONE will be accepted!
+                      </p>
+                    </div>
+                    <div class="faq-entry col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                      <h3>
+                        What is the sign up process?
+                      </h3>
+                      <p>
+                        We want a diverse, creative, and passionate group of hackers at our hackathon. You do not have to have any previous hackathon experience. We will ask a variety of questions to get to know a little bit about you.
+                      </p>
+                    </div>
+                    <div class="faq-entry col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                      <h3>
+                        I'm not a student anymore. Can I signup?
+                      </h3>
+                      <p>
+                        This hackathon is open to everyone, whether you are a student or not.
+                      </p>
+                    </div>
+                  </div>
+                  <div id="hacking" class="faq-category row">
+                    <div class="faq-entry col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                      <h3>
+                        What is this hackathon you speak of?
+                      </h3>
+                      <p>
+                        A hackathon (also known as a hack day, hackfest or codefest) is an event in which computer programmers and entrepreneurs collaborate to develope and design software projects.
+                      </p>
+                    </div>
+                    <div class="faq-entry col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                      <h3>
+                        What should I hack?
+                      </h3>
+                      <p>
+                        Anything that you are passionate about. Don't worry about coming with idea or team in advance. You will meet great people at the event, and then you can come up with an idea together!
+                      </p>
+                    </div>
+                    <div class="faq-entry col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                      <h3>
+                        What do you mean by "hack"?
+                      </h3>
+                      <p>
+                        It's just a bunch of people getting together and creating awesome programs. Nothing like the Defcon convention which is specifically for the purpose of hacking into computers.
+                      </p>
+                    </div>
+                    <div class="faq-entry col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                      <h3>
+                        But I don't know how to program.
+                      </h3>
+                      <p>
+                        We will have a bunch of workshops aimed to help inexperienced people learn a few lines of code. Plus, you can talk to the awesome people attending to learn more.
+                      </p>
+                    </div>
+                  </div>
+                  <div id="travel" class="faq-category row">
+                    <div class="faq-entry col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                      <h3>
+                        How do I get to EagleHacks?
+                      </h3>
+                      <p>
+                        EagleHacks will take place at the Allen Performing Arts Center in, Texas. Dallas has its own airport with flights from all over the world. The cities Austin and Houston are very close with frequent train and bus connections. Once you arrive in Dallas you can follow the instructions here:
+                        <a href="https://goo.gl/maps/23pg6uVa3uK2" target="_blank">
+                          How to get to the Allen Performing Arts Center
+                        </a>
+                      </p>
+                    </div>
+                    <div class="faq-entry col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                      <h3>
+                        How much does it cost?
+                      </h3>
+                      <p>
+						Standard Tickets are $20.  VIP Tickets are $35.  Perks of VIP Tickets: Front Row seat at Ceremonies, front of meal lines, exlusive VIP swag, VIP sticker pack, and unlimited bragging rights.  VIP Tickets are for professionals interested in competing in EagleHacks. A professional is anyone who is not a student enrolled in a university, college, or high school.
+                        <a href="http://www.eventbrite.com/e/eaglehacks-winter-2016-startup-hackathon-tickets-19567604231?aff=es2" target="_blank">
+                        Get your tickets here!
+                        </a>
+                        You will be able to receive some money for travel. Eaglehacks is made possible by you and our sponsors. Interested in sponsoring?
+                      </p>
+                    </div>
+                    <!--<div class="faq-entry col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                      <h3>
+                        I'm arriving a day before the event. Can you host me?
+                      </h3>
+                      <p>
+                        We can't provide you with a proper room but closer to the event we will get in touch with everyone to estimate how many people are arriving earlier and we'll give our best to find some fellow students at the university that might be able to host you for one night in their rooms.
+                      </p>
+                    </div>-->
+                  </div>
+                  <div id="others" class="faq-category row">
+                    <div class="faq-entry col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                      <h3>
+                        Who organizes EagleHacks?
+                      </h3>
+                      <p>
+                        EagleHacks was founded and is organized by students of Allen High School. You can see the whole team and their contacts in our &nbsp;
+                        <a href="https://eaglehacks.com/#team">
+                          Team section
+                        </a>
+                        .
+                      </p>
+                    </div>
+                    <div class="faq-entry col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                      <h3>
+                        Is there a theme?
+                      </h3>
+                      <p>
+                        EagleHacks does not have an overall theme, meaning you can qualify with any project that you code within the 24 hours to win the main prize. However, there will be some separate prizes that will have a theme. These themes will be announced at the event.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--###################################################################################################################################################-->
+      <section class="row dark">
+        <div class="col-xs-10 col-xs-offset-1">
+          <h1 id="team" class="section-title">
+            The Team<span>
+            Meet the Organizers</span>
+          </h1>
+          <h1 class="lead text-center">
+            <p>
+              EagleHacks is organized by a diverse and cross-disciplinary team of high school students.
+            </p>
+            <p>
+              Feel free to contact us if you have any questions or issues regarding the event.
+            </p>
+          </h1>
+          <div class="team-entries">
+            <div class="team-member-wrapper">
+              <div class="team-member">
+                <div class="team-member-header">
+                  <img src="./index_files/Team/Bobby.jpg" class="img-responsive header-blur">
+                </div>
+                <img src="./index_files/Team/Bobby.jpg" class="img-circle team-member-img">
+                <div class="team-member-details">
+                  <p class="team-member-name">
+                    Bobby Thakkar
+                  </p>
+                  <p class="team-member-role">
+                    Lead-Organizer
+                  </p>
+                  <div class="team-member-contact">
+                    <a href="mailto:contact@EagleHacks.com" target="_blank" class="btn btn-round-social btn-mail">
+                      <i class="fa fa-lg fa-inbox">
+                      </i>
+                    </a>
+                    <a href="https://www.facebook.com/Bobby.thakkar.99?fref=ts" target="_blank" class="btn btn-round-social btn-facebook">
+                      <i class="fa fa-lg fa-facebook">
+                      </i>
+                    </a>
+                    <a href="https://twitter.com/BobbyThakkar" target="_blank" class="btn btn-round-social btn-twitter">
+                      <i class="fa fa-lg fa-twitter">
+                      </i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="team-member-wrapper">
+              <div class="team-member">
+                <div class="team-member-header">
+                  <img src="./index_files/Team/Zack.jpg" class="img-responsive header-blur">
+                </div>
+                <img src="./index_files/Team/Zack.jpg" class="img-circle team-member-img">
+                <div class="team-member-details">
+                  <p class="team-member-name">
+                    Zack Farrington
+                  </p>
+                  <p class="team-member-role">
+                    Web Designer
+                  </p>
+                  <div class="team-member-contact">
+                    <a href="mailto:contact@EagleHacks.com" target="_blank" class="btn btn-round-social btn-mail">
+                      <i class="fa fa-lg fa-inbox">
+                      </i>
+                    </a>
+                    <a href="https://www.facebook.com/zack.farrington" target="_blank" class="btn btn-round-social btn-facebook">
+                      <i class="fa fa-lg fa-facebook">
+                      </i>
+                    </a>
+                    <a href="https://twitter.com/zack_farrington" target="_blank" class="btn btn-round-social btn-twitter">
+                      <i class="fa fa-lg fa-twitter">
+                      </i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="team-member-wrapper">
+              <div class="team-member">
+                <div class="team-member-header">
+                  <img src="./index_files/Team/Emily.jpg" class="img-responsive header-blur">
+                </div>
+                <img src="./index_files/Team/Emily.jpg" class="img-circle team-member-img">
+                  <div class="team-member-details">
+                    <p class="team-member-name">
+                      Emily Chen
+                    </p>
+                    <p class="team-member-role">
+                      Lead-Organizer
+                    </p>
+                  <div class="team-member-contact">
+                    <!--<a href="https://github.com/dkundel" target="_blank" class="btn btn-round-social btn-github">
+                      <i class="fa fa-lg fa-github">
+                      </i>
+                    </a>-->
+                    <a href="mailto:contact@EagleHacks.com" target="_blank" class="btn btn-round-social btn-mail">
+                      <i class="fa fa-lg fa-inbox">
+                      </i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--<div class="team-member-wrapper">
+              <div class="team-member">
+                <div class="team-member-header">
+                  <img src="./index_files/Team/Ammar.jpg" class="img-responsive header-blur">
+                </div>
+                <img src="./index_files/Team/Ammar.jpg" class="img-circle team-member-img">
+                <div class="team-member-details">
+                  <p class="team-member-name">
+                    Ammar Nanjiani
+                  </p>
+                  <p class="team-member-role">
+                    Logistics
+                  </p>
+                  <div class="team-member-contact">
+                    <a href="mailto:contact@EagleHacks.com" target="_blank" class="btn btn-round-social btn-mail">
+                      <i class="fa fa-lg fa-inbox">
+                      </i>
+                    </a>
+                    <a href="https://www.facebook.com/ananjiani?fref=ts" target="_blank" class="btn btn-round-social btn-facebook">
+                      <i class="fa fa-lg fa-facebook">
+                      </i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>-->
+            <!--<div class="team-member-wrapper">
+              <div class="team-member">
+                <div class="team-member-header">
+                  <img src="./index_files/Team/Carlos.jpg" class="img-responsive header-blur">
+                </div>
+                <img src="./index_files/Team/Carlos.jpg" class="img-circle team-member-img">
+                <div class="team-member-details">
+                  <p class="team-member-name">
+                    Carlos Esponda
+                  </p>
+                  <p class="team-member-role">
+                    Marketing
+                  </p>
+                  <div class="team-member-contact">
+                    <a href="mailto:contact@EagleHacks.com" target="_blank" class="btn btn-round-social btn-mail">
+                      <i class="fa fa-lg fa-inbox">
+                      </i>
+                    </a>
+                    <a href="https://www.facebook.com/esponda2?fref=ts" target="_blank" class="btn btn-round-social btn-facebook">
+                      <i class="fa fa-lg fa-facebook">
+                      </i>
+                    </a>
+                    <a href="https://twitter.com/Carlos7Esponda" target="_blank" class="btn btn-round-social btn-twitter">
+                      <i class="fa fa-lg fa-twitter">
+                      </i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>-->
+            <!--<div class="team-member-wrapper">
+              <div class="team-member">
+                <div class="team-member-header">
+                  <img src="./index_files/Team/Sameer.jpg" class="img-responsive header-blur">
+                </div>
+                <img src="./index_files/Team/Sameer.jpg" class="img-circle team-member-img">
+                <div class="team-member-details">
+                  <p class="team-member-name">
+                    Sameer Ahmed
+                  </p>
+                  <p class="team-member-role">
+                    Marketing
+                  </p>
+                  <div class="team-member-contact">
+                    <a href="mailto:contact@EagleHacks.com" target="_blank" class="btn btn-round-social btn-mail">
+                      <i class="fa fa-lg fa-inbox">
+                      </i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>-->
+            <div class="team-member-wrapper">
+              <div class="team-member">
+                <div class="team-member-header">
+                  <img src="./index_files/Team/NimitKarla.jpg" class="img-responsive header-blur">
+                </div>
+                <img src="./index_files/Team/NimitKarla.jpg" class="img-circle team-member-img">
+                <div class="team-member-details">
+                  <p class="team-member-name">
+                    Nimit Karla
+                  </p>
+                  <p class="team-member-role">
+                    Finance
+                  </p>
+				  <div class="team-member-contact">
+                    <a href="mailto:contact@EagleHacks.com" target="_blank" class="btn btn-round-social btn-mail">
+                      <i class="fa fa-lg fa-inbox">
+                      </i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--###################################################################################################################################################-->
+      <section class="row dark">
+        <div class="col-xs-10 col-xs-offset-1 text-center">
+          <h1>
+            <i>
+              #EagleHacks</i>
+          </h1>
+        </div>
+      </section>
+    </div>
+    <!--###################################################################################################################################################-->
+    <footer>
+      <p class="text-center jh-footer-logo">
+        <img src="./index_files/EagleHacks Pictures/Square Logo Red.png" alt="EagleHacks">
+      </p>
+      <p class="text-center">
+        <span class="fa fa-code fa-lg">
+        </span>
+        &nbsp;
+        with &nbsp;
+        <span class="fa fa-heart fa-lg">
+        </span>
+        &nbsp;
+        by &nbsp;
+        the EagleHacks team. Hosting generously provided by <a href="https://www.mywikis.com">MyWikis</a>.</p>
+    </footer>
+    <!--###################################################################################################################################################-->
+  </body>
+</html>
